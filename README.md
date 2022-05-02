@@ -1,4 +1,4 @@
-# Hedgehog-Script-Style-Guide
+# Hedgehog Script Style Guide
 
 
 ## Here we will cover ... 
@@ -6,7 +6,7 @@
 
 JavaScript is a very flexible language with many design paradigms. We encourage unique personal styles to be mixed into code, however, we must maintain consistency on some things.
 
-## `Comments`
+## Comments
 
 Comments are extremely useful for readability, whether it's the maintainer or a developer or even user looking at the implementation:
 <ul>
@@ -27,7 +27,7 @@ Comments are extremely useful for readability, whether it's the maintainer or a 
 */
 ```
 
-## `File names`
+## File names
 
 We've been using lowercase & underscores for file names. Everything such as the variables and sub functions are up to you, but please name the functions/classes and file names like the following:
 ```js
@@ -37,7 +37,7 @@ function function_name(input) {
 ... --> named 'function_name.hhs'
 ```
 
-## `Var - And Avoiding it `
+## `Var` - And Avoiding it 
 
 We ask that you avoid `var` and always use `let` for the following reasons: 
 
@@ -62,10 +62,8 @@ function example(input) {
 }
 ```
 
-
-```
 If we do the following, we get this...
-
+```js
 let x = [[2,3],[4,5]];
 print(x) --------> 2,3,4,5
 let y = example(x);
@@ -96,7 +94,7 @@ function transpose(input) {
 }
 ```
 
-That's 2 ways: using deep_copy(input) and input.clone() (for Mats). 
+That's 2 ways: using `deep_copy(input)` and `input.clone()` (for matrix `Mat` objects). 
 
 The other 2 ways are as following:
 
