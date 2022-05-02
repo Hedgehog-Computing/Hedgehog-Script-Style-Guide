@@ -72,7 +72,7 @@ print(y) ---------> hello,3,4,5
 print(x) ---------> hello,3,4,5
 //.. we modified the user's original input through the function which we want to avoid
 ```
-There are multiple solutions to this. I'll demonstrate 4 through the usage of transpose.hhs which copies the original input and modifies it:
+There are multiple solutions to this. I'll demonstrate 4 through the usage of `transpose.hhs` which copies the original input and modifies it:
 
 ```js
 
