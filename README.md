@@ -36,10 +36,32 @@ function function_name(input) {
 }
 ... --> named 'function_name.hhs'
 ```
+## `*import math:function` statements
+
+These need to go **inside** the function block, specifically at the very beginning. Reason being primarily efficiency. So instead of ...
+```js
+*import math:transpose
+
+function my_func(input) {
+  ...
+  transpose(something)...
+}
+```
+
+do...
+
+```js
+function my_func(input) {
+*import math:transpose
+  ...
+  transpose(something)...
+}
+```
+
 
 ## `Var` - And Avoiding it 
 
-We ask that you avoid `var` and always use `let` for the following reasons: 
+We ask that you avoid `var` and always use `let` for the following reasons: In JavaScript `var` can cause a lot of issues. Primarily, if a function calls another function and both have variables with the same name and scope of `var` then bad interactions can occur. It is bad style to use it in large projects. 
 
 
 ## Not modifying original input
