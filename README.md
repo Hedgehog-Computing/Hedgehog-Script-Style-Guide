@@ -63,6 +63,19 @@ function my_func(input) {
 
 We ask that you avoid `var` and always use `let` for the following reasons: In JavaScript `var` can cause a lot of issues. Primarily, if a function calls another function and both have variables with the same name and scope of `var` then bad interactions can occur. It is bad style to use it in large projects. 
 
+## Exceptions, Errors
+
+For exceptions all we ask for now is that when the exception is thrown, it tells you the function in which it is thrown and very specifically why it was thrown. This helps the user debug their code. We may eventually move to try-catch blocks for everything so the user can debug much easier, but for now, follow the following example:
+
+```js
+//Suppose this is somewhere in the transpose.hhs function
+
+if ( !(arguments.length === 1) ) {
+  
+  throw new Error('Exception thrown in transpose.hhs due to arguments.length not being 1 when we're expecting only 1 argument.');
+
+}
+```
 
 ## Not modifying original input
 
